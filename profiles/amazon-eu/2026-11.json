@@ -1,0 +1,33 @@
+{
+    "id": "amazon-eu",
+    "version": "2026-11",
+    "description": "Amazon EU: 120 x 100 cm pallets. Whole profile unconfirmed; box rules are those of amazon-us converted to cm/kg.",
+    "units": { "length": "cm", "weight": "kg" },
+    "pallet": {
+        "length": 120,
+        "width": 100,
+        "overhang": 0,
+        "tareHeight": 15,
+        "tareWeight": 25
+    },
+    "modes": {
+        "non_stackable": { "maxHeight": 180, "maxWeight": 500 }
+    },
+    "mandatoryPallet": {
+        "boxWeightOver": 45.359,
+        "boxWidthOver": 76.2,
+        "setWeightOver": 45.359
+    },
+    "boxRules": {
+        "unsupportedLengthOver": 203.2,
+        "heavyBoxWarningOver": 22.679,
+        "singleUnitHeightOver": 182.88
+    },
+    "defaults": {
+        "rotation": "keep_upright",
+        "minSupport": 0.8,
+        "bandTolerance": 2.54,
+        "parcelMinFill": null
+    },
+    "unconfirmed": ["*"]
+}

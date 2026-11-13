@@ -1,0 +1,64 @@
+{
+    "name": "palletwise/palletwise",
+    "description": "Deterministic pallet count estimation for inbound shipments, driven by configurable destination profiles (Amazon FBA, Walmart WFS or your own).",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/Alvaromero/palletwise",
+    "authors": [
+        {
+            "name": "Alvaro Romero"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Alvaromero/palletwise/issues",
+        "source": "https://github.com/Alvaromero/palletwise",
+        "security": "https://github.com/Alvaromero/palletwise/security/policy"
+    },
+    "keywords": [
+        "pallet",
+        "palletization",
+        "pallet-calculator",
+        "bin-packing",
+        "logistics",
+        "amazon",
+        "fba",
+        "walmart",
+        "wfs"
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Palletwise\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Palletwise\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2.0"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "ci": [
+            "@cs",
+            "@analyse",
+            "@test"
+        ]
+    }
+}

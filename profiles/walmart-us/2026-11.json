@@ -1,0 +1,39 @@
+{
+    "id": "walmart-us",
+    "version": "2026-11",
+    "description": "Walmart Fulfillment Services (WFS): 48 x 40 in GMA pallets for LTL/FTL inbound shipments. Pallets must be under 72 in and 2,100 lb; the strict 'under' is modeled as 71.999 in and 2,099.999 lb.",
+    "units": { "length": "in", "weight": "lb" },
+    "pallet": {
+        "length": 48,
+        "width": 40,
+        "overhang": 0,
+        "tareHeight": 6,
+        "tareWeight": 50
+    },
+    "modes": {
+        "non_stackable": { "maxHeight": 71.999, "maxWeight": 2099.999 },
+        "stackable": { "maxHeight": 49.999, "maxWeight": 2099.999 }
+    },
+    "mandatoryPallet": {
+        "boxWeightOver": null,
+        "boxWidthOver": null,
+        "setWeightOver": null
+    },
+    "boxRules": {
+        "unsupportedLengthOver": null,
+        "heavyBoxWarningOver": 150,
+        "singleUnitHeightOver": null
+    },
+    "defaults": {
+        "rotation": "keep_upright",
+        "minSupport": 0.8,
+        "bandTolerance": 1,
+        "parcelMinFill": null
+    },
+    "unconfirmed": [
+        "pallet.tareHeight",
+        "pallet.tareWeight",
+        "modes.stackable.maxHeight",
+        "modes.stackable.maxWeight"
+    ]
+}

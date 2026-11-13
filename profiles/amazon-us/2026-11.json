@@ -1,0 +1,37 @@
+{
+    "id": "amazon-us",
+    "version": "2026-11",
+    "description": "Amazon US: 48 x 40 in pallets for LTL/FTL shipments to Amazon fulfillment centers.",
+    "units": { "length": "in", "weight": "lb" },
+    "pallet": {
+        "length": 48,
+        "width": 40,
+        "overhang": 0,
+        "tareHeight": 5,
+        "tareWeight": 40
+    },
+    "modes": {
+        "non_stackable": { "maxHeight": 72, "maxWeight": 1500 },
+        "stackable": { "maxHeight": 50, "maxWeight": 750 }
+    },
+    "mandatoryPallet": {
+        "boxWeightOver": 100,
+        "boxWidthOver": 30,
+        "setWeightOver": 100
+    },
+    "boxRules": {
+        "unsupportedLengthOver": 80,
+        "heavyBoxWarningOver": 50,
+        "singleUnitHeightOver": 72
+    },
+    "defaults": {
+        "rotation": "keep_upright",
+        "minSupport": 0.8,
+        "bandTolerance": 1,
+        "parcelMinFill": null
+    },
+    "unconfirmed": [
+        "modes.stackable.maxHeight",
+        "modes.stackable.maxWeight"
+    ]
+}
